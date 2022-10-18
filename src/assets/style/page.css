@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+:root {
+    --navy: #002772;
+    --pink: #FDE2FF;
+    --black: #1E1E1E;
+    --magenta: #720060;
+    --blue: #D6E6FF;
+    --gray: #3F3F3F;
+    --white: #FFFFFF
+}                     
+.container {
+    position: relative;
+    height: 100vh;
+    /* position: relative; */
+    background: linear-gradient(180deg, var(--blue) 65%, var(--white) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    gap: 5%;
+}
+.product-thumbnail {
+    width: 100%;
+}
+.product-thumbnail > img {
+    width: 100%;
+}
+.product-details {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-details .title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--navy);
+}
+.product-details .sub-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 14px;
+    font-size: 18px;
+    color: var(--gray);
+}
+.product-details .rating {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+.rating > .circle {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: var(--navy);
+}
+.product-details .description {
+    width: 100%;
+    margin-top: 32px;
+    font-size: 18px;
+    color: var(--black);
+}
+.product-details .price {
+    font-size: 32px;
+    color: var(--navy);
+    font-weight: 600;
+}
+.product-details .cta {
+    margin-top: 16px;
+}
+.cta > .cta-buy,
+.cta > .cta-next {
+    /* padding: 6px 56px; */
+    width: 35%;
+    height: 36px;
+    font-size: 16px;
+    background-color: var(--navy);
+    border-radius: none;
+    border: none;
+    color: white;
+    margin-right: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cta > .cta-next {
+    border: 2px solid var(--navy);
+    color: var(--navy);
+    background-color: var(--white);
+}
+.bg-blue {
+    background-color: var(--blue);
+}
+.bg-pink {
+    background-color: var(--pink);
+}
+.bg-white {
+    background-color: var(--white);
+}
+.font-navy {
+    color: var(--navy);
+}
+.font-pink {
+    color: var(--pink);
+}
