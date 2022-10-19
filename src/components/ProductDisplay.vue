@@ -1,8 +1,10 @@
 <template>
     <div class="container">
-        <div class="product-container">
-            <div class="product-thumbnail">
-                <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="Mens Casual Premium Slim Fit T-Shirts thumbnail">
+        <div v-if="isLoading" class="product-container">
+            <div class="skeleton-thumbnail"></div>
+            <div class="skeleton-details">
+                <div class="skeleton-details-top"></div>
+                <div class="skeleton-details-bottom"></div>
             </div>
             <div class="product-details">
                 <div>
