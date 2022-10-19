@@ -71,6 +71,12 @@ export default {
         async getSingleProduct() {
             this.isLoading = true;
 
+            if (this.index !== 20) {
+                this.index++
+            } else {
+                this.index = 1;
+            }
+
             let data = await this.callAPI()
             if (data.category === "men's clothing" || data.category === "women's clothing") {
                 this.product = { data }
