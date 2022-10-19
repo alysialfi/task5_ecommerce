@@ -56,8 +56,34 @@ export default {
     name: 'ProductDisplay',
     data() {
         return {
-            
+            isLoading: false,
+            index: 0,
+            isProductAvailable: false,
+            product: {}
         }
+    },
+    methods: {
+        async callAPI() {
+            const response = await fetch(`https://fakestoreapi.com/products/${this.index}`);
+            const result = await response.json();
+            return result;
+        },
+        async getSingleProduct() {
+            this.isLoading = true;
+
+            let data = await this.callAPI()
+            if (data.category === "men's clothing" || data.category === "women's clothing") {
+                this.product = { data }
+                this.isProductAvailable = true;
+            } else {
+                this.isProductAvailable = false;
+            }
+
+            this.isLoading = false;
+        }
+    },
+    mounted() {
+        this.getSingleProduct();
     },
 }
 </script>
