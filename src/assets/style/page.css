@@ -81,7 +81,6 @@
 .product-details .title {
     font-size: 32px;
     font-weight: 600;
-    color: var(--navy);
 }
 .product-details .sub-title {
     display: flex;
@@ -111,7 +110,6 @@
 }
 .product-details .price {
     font-size: 32px;
-    color: var(--navy);
     font-weight: 600;
 }
 
@@ -127,16 +125,15 @@
     width: 35%;
     height: 36px;
     font-size: 16px;
-    background-color: var(--navy);
     border-radius: none;
-    border: none;
-    color: white;
     font-weight: bold;
     cursor: pointer;
 }
+.cta > .cta-buy {
+    color: var(--white);
+    border: none;
+}
 .cta > .cta-next {
-    border: 2px solid var(--navy);
-    color: var(--navy);
     background-color: var(--white);
 }
 .bg-blue {
@@ -151,11 +148,23 @@
 .bg-white {
     background-color: var(--white);
 }
+.bg-navy {
+    background-color: var(--navy);
+}
+.bg-magenta {
+    background-color: var(--magenta);
+}
+.border-navy {
+    border: 2px solid var(--navy);
+}
+.border-magenta {
+    border: 2px solid var(--magenta);
+}
 .font-navy {
     color: var(--navy);
 }
-.font-pink {
-    color: var(--pink);
+.font-magenta {
+    color: var(--magenta);
 }
 
 /* animation */

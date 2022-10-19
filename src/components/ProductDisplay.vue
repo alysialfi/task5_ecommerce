@@ -20,17 +20,17 @@
                 </div>
                 <div class="product-details">
                     <div class="top">
-                        <h3 class="title">{{ product.data.title }}</h3>
+                        <h3 :class="product.data.category === 'men\'s clothing' ? 'font-navy' : 'font-magenta'" class="title">{{ product.data.title }}</h3>
                         <div class="sub-title">
                             <span>{{ product.data.category }}</span>
                             <div class="rating">
                                 <span>{{ product.data.rating.rate }}/5</span>
                                 <div class="rating">
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
-                                    <span class="circle"></span>
+                                    <span :class="product.data.category === 'men\'s clothing' ? 'bg-navy' : 'bg-magenta'" class="circle"></span>
+                                    <span :class="product.data.category === 'men\'s clothing' ? 'bg-navy' : 'bg-magenta'" class="circle"></span>
+                                    <span :class="product.data.category === 'men\'s clothing' ? 'bg-navy' : 'bg-magenta'" class="circle"></span>
+                                    <span :class="product.data.category === 'men\'s clothing' ? 'bg-navy' : 'bg-magenta'" class="circle"></span>
+                                    <span :class="product.data.category === 'men\'s clothing' ? 'bg-navy' : 'bg-magenta'" class="circle"></span>
                                 </div>
                             </div>
                         </div>
@@ -39,10 +39,10 @@
                         </div>
                     </div>
                     <div class="bottom">
-                        <span class="price">${{ product.data.price }}</span>
+                        <span :class="product.data.category === 'men\'s clothing' ? 'font-navy' : 'font-magenta'" class="price">${{ product.data.price }}</span>
                         <div class="cta">
-                            <button type="button" class="cta-buy">Buy Now</button>
-                            <button type="button" @click="getSingleProduct()" class="cta-next">Next Product</button>
+                            <button type="button" :class="product.data.category === 'men\'s clothing' ? 'bg-navy' : 'bg-magenta'" class="cta-buy">Buy Now</button>
+                            <button type="button" @click="getSingleProduct()" :class="product.data.category === 'men\'s clothing' ? 'border-navy font-navy' : 'border-magenta font-magenta'" class="cta-next">Next Product</button>
                         </div>
                     </div>
                 </div>
