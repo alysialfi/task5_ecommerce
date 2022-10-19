@@ -54,6 +54,8 @@
 }
 .product-unavailable-container .cta-next {
     margin: 0px auto;
+    border: 2px solid black;
+    color: black;
 }
 
 /* available product */
